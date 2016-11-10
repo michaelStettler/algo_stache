@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css.css" />
+    <script type="text/javascript" src="ScreenEvent.js"></script>
+    <script type="text/javascript" src="Algo.js"></script>
+</head>
+<body>
+
+<div class = "fullDay">
+
+    <div id="hour"></div>
+    <div id = "day">
+
+</div>
+
+</div>
+
+<script>
+    var event1 = new ScreenEvent(1,0,60,"#2cacfa");
+    var event2 = new ScreenEvent(3,30,120,"#FAA41A");
+    var event3 = new ScreenEvent(4,30,30,"#94E639");
+    var listEvent = [event1,event2,event3];
+
+    var width = $('#day').width();
+    var height = $('#day').height();
+    var heightOneHour = height/24;
+    var shift = heightOneHour/4;
+    $('#hour').css("top",-shift+"px");
+
+    for(var i=0; i<25;i++){
+        var topBorder = heightOneHour*i;
+        $('#hour').append('<div style="top:'+topBorder+'px;height:'+heightOneHour+'px">'+i+':00</div>');
+    }
+    algo(listEvent);
+    listEvent.forEach(function(event){
+        event.show(width,height);
+    });
+
+
+</script>
+</body>
+</html>

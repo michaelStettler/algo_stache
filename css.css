@@ -1,0 +1,36 @@
+html{
+    height:100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fullDay{
+    position:absolute;
+    left:0%;
+    width:100%;
+    top:5%;
+    height:90%;
+}
+
+#hour {
+    position:absolute;
+    left:35%;
+    width:4.5%;
+    text-align:right;
+    font: "Avenir Next";
+    font-size: small;
+    color:#969696;
+}
+#day {
+    position:absolute;
+    background: #E6E6E6;
+    left:40%;
+    width:20%;
+    height:100%;
+}
+.event{
+    position:inherit;
+}
