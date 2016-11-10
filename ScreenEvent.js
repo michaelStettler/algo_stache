@@ -22,6 +22,7 @@ ScreenEvent.prototype.show = function(width,height){
     var widthEvent = width/this.numberOfParallelConflict;
     var heightEvent = heightOneMinute*this.duration;
 
+    $('#day').append('<div class = "back_event" style ="top:'+topBorder+'px;width:'+widthEvent+'px;height:'+heightEvent+'px;"> <div>');
     $('#day').append('<div class = "event" style ="top:'+topBorder+'px;width:'+widthEvent+'px;height:'+heightEvent+'px;background:'+this.color+'"> <div>');
 
 };
